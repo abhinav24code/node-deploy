@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Card</title>
+
+    <!-- Bootstrap + Font Awesome (CDNs) -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      /* Page background */
+      body {
+        background-color: #eee;
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+      }
+
+      /* Container */
+      .container-custom {
+        width: 900px;
+        margin: 40px auto;
+      }
+
+      /* Card */
+      .product-card {
+        background-color: #fff;
+        border: none;
+        border-radius: 10px;
+        width: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+        overflow: hidden;
+      }
+
+      .image-container {
+        position: relative;
+      }
+
+      .thumbnail-image {
+        border-radius: 10px 10px 0 0 !important;
+        width: 100%;
+        display: block;
+        height: 160px;
+        object-fit: cover;
+      }
+
+      .discount {
+        background-color: red;
+        padding: 1px 6px;
+        font-size: 11px;
+        border-radius: 6px;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .wishlist {
+        height: 28px;
+        width: 28px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        border: none;
+      }
+
+      .first {
+        position: absolute;
+        width: 100%;
+        padding: 10px;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+      }
+
+      .dress-name {
+        font-size: 13px;
+        font-weight: 700;
+        width: 72%;
+        margin: 0;
+      }
+
+      .new-price {
+        font-size: 13px;
+        font-weight: 800;
+        color: #d32f2f;
+      }
+
+      .old-price {
+        font-size: 10px;
+        font-weight: 700;
+        color: grey;
+        text-decoration: line-through;
+      }
+
+      .rating-star {
+        font-size: 12px !important;
+        color: #f4c150;
+      }
+
+      .rating-number {
+        font-size: 12px;
+        color: grey;
+        margin-left: 6px;
+      }
+
+      .buy {
+        font-size: 12px;
+        color: purple;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      /* Utility */
+      .product-detail-container {
+        padding: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-custom">
+      <div class="row">
+        <div class="col-auto">
+          <!-- Product card -->
+          <article class="product-card" aria-label="Product Card">
+            <div class="image-container">
+              <div class="first">
+                <div class="d-flex justify-content-between align-items-start">
+                  <span class="discount" aria-hidden="true">-25%</span>
+                  <button
+                    class="wishlist"
+                    aria-label="Add to wishlist"
+                    title="Add to wishlist"
+                    type="button"
+                  >
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sample image: replace URL with your image link -->
+              <img
+                src="**url**"
+                alt="Sample product"
+                class="img-fluid rounded thumbnail-image"
+              />
+            </div>
+
+            <div class="product-detail-container">
+              <div class="d-flex justify-content-between align-items-start">
+                <h5 class="dress-name">**Title**</h5>
+
+                <div class="d-flex flex-column mb-2 text-right">
+                  <span class="new-price">**Price**</span>
+                  <small class="old-price">₹ 799</small>
+                </div>
+              </div>
+
+              <div
+                class="d-flex justify-content-between align-items-center pt-2"
+              >
+                <div class="d-flex align-items-center" aria-hidden="true">
+                  <i class="fa fa-star rating-star" aria-hidden="true"></i>
+                  <span class="rating-number">**Rating**</span>
+                </div>
+
+                <button
+                  class="buy btn btn-link p-0"
+                  type="button"
+                  aria-label="Buy now"
+                >
+                  BUY +
+                </button>
+              </div>
+            </div>
+          </article>
+          <!-- /Product card -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
